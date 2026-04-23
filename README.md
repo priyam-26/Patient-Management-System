@@ -153,6 +153,7 @@ This app is designed to be deployed on **Render**.
 
 - `Procfile`
 - `requirements.txt`
+- `runtime.txt`
 - Environment variable:
 
   ```
@@ -166,13 +167,19 @@ This app is designed to be deployed on **Render**.
 - App uses PostgreSQL placeholders (`%s`) for queries
 - Backend handles all validation securely
 - Frontend communicates via REST APIs
+- runtime.txt ensures Python compatibility
 
 ---
 
 ## 🔗 Frontend Reference
 
 The UI is built using a clean layout with dynamic rendering via JavaScript.
-A simplified version of the UI structure can be seen here:
+It includes:
+
+- Search section
+- Add patient form
+- Dynamic table with delete option
+- Pagination system
 
 ---
 
@@ -187,7 +194,7 @@ Developed by **Priyam Prabhat**
 - ✏️ Edit/Update patient records
 - 🔐 Authentication system (doctor login)
 - 📊 Dashboard analytics
-- ☁️ Multi-user SaaS version
+- ☁️ Multi-tenant SaaS version
 
 ---
 

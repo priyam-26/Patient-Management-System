@@ -102,7 +102,7 @@ async function searchPatient() {
                 Phone: ${data.patient.phone || '-'}<br><br>
 
                 <button class="delete-btn" onclick="deletePatientFromSearch(${data.patient.id})">
-                    Delete
+                    Remove
                 </button>
             </div>
         `;
