@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-import psycopg2
+import psycopg
 import os
 import math
 import re
@@ -15,7 +15,7 @@ def get_db_connection():
     if not DATABASE_URL:
         raise Exception("DATABASE_URL is not set")
 
-    conn = psycopg2.connect(DATABASE_URL)
+    conn = psycopg.connect(DATABASE_URL)
     return conn
 
 # -----------------------------
@@ -80,7 +80,7 @@ def add_patient():
         conn.commit()
         message = "Patient added successfully"
 
-    except psycopg2.errors.UniqueViolation:
+    except psycopg.errors.UniqueViolation:
         conn.rollback()
         message = "Patient number already exists"
 
