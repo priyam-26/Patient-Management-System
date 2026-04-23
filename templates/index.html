@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Patient Management System</h1>
+
+    <!-- 🔍 SEARCH -->
+    <div class="card">
+        <div class="form-row">
+            <input type="text" id="searchInput" placeholder="Enter Patient Number">
+            <button onclick="searchPatient()">Search</button>
+        </div>
+        <div id="searchResult"></div>
+    </div>
+
+    <!-- ➕ ADD -->
+    <div class="card">
+        <h3>Add Patient</h3>
+
+        <div class="form-row">
+            <input type="text" id="patientNumber" placeholder="Patient Number">
+            <input type="text" id="patientName" placeholder="Patient Name">
+            <input type="text" id="phone" placeholder="Phone (Optional)">
+            <button onclick="addPatient()">Save</button>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <!-- 📋 LIST -->
+    <div class="card">
+        <h3>Patient List</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Patient Number</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="patientTable"></tbody>
+            </table>
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
