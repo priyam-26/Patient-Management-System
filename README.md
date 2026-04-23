@@ -153,7 +153,6 @@ This app is designed to be deployed on **Render**.
 
 - `Procfile`
 - `requirements.txt`
-- `runtime.txt`
 - Environment variable:
 
   ```
@@ -167,7 +166,6 @@ This app is designed to be deployed on **Render**.
 - App uses PostgreSQL placeholders (`%s`) for queries
 - Backend handles all validation securely
 - Frontend communicates via REST APIs
-- runtime.txt ensures Python compatibility
 
 ---
 
