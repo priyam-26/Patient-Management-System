@@ -94,6 +94,18 @@ th {
     margin: 3px;
 }
 
+#backupTable {
+    margin-top: 15px;
+}
+
+#backupTable th {
+    background: #28a745;
+}
+
+#backupTable td {
+    font-size: 14px;
+}
+
 .result-box {
     margin-top: 10px;
     padding: 15px;

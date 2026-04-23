@@ -179,6 +179,21 @@ def delete_patient(id):
         return jsonify({"message": "Patient deleted successfully"})
     else:
         return jsonify({"message": "Patient not found"})
+    
+    
+# -----------------------------
+# Backup Data
+# -----------------------------
+
+@app.route('/backup')
+def backup():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM patients")
+    data = cursor.fetchall()
+    conn.close()
+
+    return jsonify(data)
 
 # -----------------------------
 # RUN APP
