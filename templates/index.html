@@ -60,22 +60,6 @@
     </div>
 </div>
 
-<div class="card">
-    <h3>Backup Data</h3>
-
-    <button onclick="loadBackup()">View Backup</button>
-    <button onclick="downloadBackup()">Download JSON</button>
-
-    <div class="table-wrapper">
-        <table id="backupTable" style="display:none;">
-            <thead>
-                <tr id="backupHeader"></tr>
-            </thead>
-            <tbody id="backupBody"></tbody>
-        </table>
-    </div>
-</div>
-
 <!-- JS -->
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
